@@ -13,11 +13,17 @@ public class CountDown : MonoBehaviour
 
     public System.Action OnGameOver;
     private BubbleManager bubbleManager;
+    private SoundManager soundManager;
+
+    private void Awake()
+    {
+        bubbleManager = FindObjectOfType<BubbleManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
 
     private void Start()
     {
         RestartCountdown();
-        bubbleManager = FindObjectOfType<BubbleManager>();
     }
 
     private void Update()
@@ -39,6 +45,7 @@ public class CountDown : MonoBehaviour
     {
         remainingTime = TimeDuration;
         TimeFill.fillAmount = 1;
+        soundManager.PlayMusic();
         this.enabled = true;
     }
 
@@ -50,6 +57,7 @@ public class CountDown : MonoBehaviour
     public void GameOver()
     {
         bubbleManager.StopSpawning();
+        soundManager.StopMusic();
         if (OnGameOver != null)
         {
             OnGameOver();

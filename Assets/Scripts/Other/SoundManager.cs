@@ -4,15 +4,43 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource BackgroundMusic;
+    public AudioSource ClickBubble;
+    public AudioSource BubbleBust;
+    public AudioSource NewRecord;
+
+    private void Start()
     {
-        
+        PlayMusic();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayMusic()
     {
-        
+        BackgroundMusic.Play();
+    }
+
+    public void StopMusic()
+    {
+        BackgroundMusic.Stop();
+    }
+
+    public void ClickingBubbles()
+    {
+        ClickBubble.Play();
+    }
+
+    public void BustingBubbles()
+    {
+        BubbleBust.Play();
+    }
+
+    public void BreakingRecords()
+    {
+        NewRecord.Play();
+    }
+
+    public void StopVictorySound()
+    {
+        NewRecord.Stop();
     }
 }

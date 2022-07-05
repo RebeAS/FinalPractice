@@ -14,12 +14,18 @@ public class ScoreManager : MonoBehaviour
     public int BustedBubble = 0;
 
     private CountDown countDown;
+    private SoundManager soundManager;
+
+    private void Awake()
+    {
+        countDown = FindObjectOfType<CountDown>();
+        soundManager = FindObjectOfType<SoundManager>();
+    }
 
     private void Start()
     {
         ResetScore();
         ShowMaxScore();
-        countDown = FindObjectOfType<CountDown>();
         countDown.OnGameOver += CheckMaxScore;
         countDown.OnGameOver += ShowMaxScore;
     }
@@ -34,6 +40,7 @@ public class ScoreManager : MonoBehaviour
     {
         CurrentScore = 0;
         BustedBubble = 0;
+        soundManager.StopVictorySound();
         NewRecord.enabled = false;
     }
 
@@ -54,6 +61,7 @@ public class ScoreManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("MaxScore", CurrentScore);
             MaxScore.text = score.ToString("00000");
+            soundManager.BreakingRecords();
             NewRecord.enabled = true;
         }
     }

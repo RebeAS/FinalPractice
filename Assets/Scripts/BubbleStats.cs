@@ -22,6 +22,7 @@ public class BubbleStats : MonoBehaviour
     private BubbleManager bubbleManager;
     private ScoreManager scoreManager;
     private CountDown countDown;
+    private SoundManager soundManager;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class BubbleStats : MonoBehaviour
         bubbleManager = FindObjectOfType<BubbleManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
         countDown = FindObjectOfType<CountDown>();
+        soundManager = FindObjectOfType<SoundManager>();
 
         countDown.OnGameOver += DeactivateBubble;
     }
@@ -72,6 +74,7 @@ public class BubbleStats : MonoBehaviour
     private void OnMouseDown()
     {
         TakeDamage();
+        soundManager.ClickingBubbles();
     }
 
     public void TakeDamage()
