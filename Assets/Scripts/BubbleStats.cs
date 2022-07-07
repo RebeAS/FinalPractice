@@ -26,9 +26,6 @@ public class BubbleStats : MonoBehaviour
 
     private void Start()
     {
-        posY = transform.position;
-        axisY = transform.up;
-
         bubbleManager = FindObjectOfType<BubbleManager>();
         scoreManager = FindObjectOfType<ScoreManager>();
         countDown = FindObjectOfType<CountDown>();
@@ -37,15 +34,18 @@ public class BubbleStats : MonoBehaviour
         countDown.OnGameOver += DeactivateBubble;
     }
 
+    private void OnEnable()
+    {
+        currentHP = MaxHP;
+
+        posY = transform.position;
+        axisY = transform.up;
+    }
+
     private void Update()
     {
         posY += transform.right * Time.deltaTime * Speed;
         transform.position = posY + axisY * Mathf.Sin(Time.time * Frequency) * Magnitude;
-    }
-
-    private void OnEnable()
-    {
-        currentHP = MaxHP;
     }
 
     public void DeactivateBubble()

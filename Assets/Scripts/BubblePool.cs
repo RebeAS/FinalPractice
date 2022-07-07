@@ -24,7 +24,6 @@ public class BubblePool : MonoBehaviour
     public GameObject GetBubbleFromPool(Vector2 position, Quaternion rotation)
     {
         GameObject poolBubble = bubbleQueue.Dequeue();
-        poolBubble.SetActive(true);
         poolBubble.transform.position = position;
         poolBubble.transform.rotation = rotation;
         bubbleQueue.Enqueue(poolBubble);

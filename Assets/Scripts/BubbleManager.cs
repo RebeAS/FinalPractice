@@ -37,6 +37,7 @@ public class BubbleManager : MonoBehaviour
                 int randomPosition = Random.Range(0, SpawnPositions.Length);
                 int randomPool = Random.Range(0, MyBubblePools.Length);
                 GameObject pooledBubble = MyBubblePools[randomPool].GetBubbleFromPool(SpawnPositions[randomPosition].position, SpawnPositions[randomPosition].rotation);
+                pooledBubble.SetActive(true);
                 currentNumBubbles++;
             }
         }
