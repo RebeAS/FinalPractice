@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 428751362}
   - component: {fileID: 428751364}
   - component: {fileID: 428751363}
+  - component: {fileID: 428751365}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -458,6 +459,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428751361}
   m_CullTransparentMesh: 1
+--- !u!95 &428751365
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428751361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a9a4b58ee669384c8c48aa4467e58e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &650795311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1102,7 @@ GameObject:
   - component: {fileID: 1332343873}
   - component: {fileID: 1332343875}
   - component: {fileID: 1332343874}
+  - component: {fileID: 1332343876}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1150,6 +1171,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332343872}
   m_CullTransparentMesh: 1
+--- !u!95 &1332343876
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332343872}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a232200e09077449855597d59b2089a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1418130226
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,14 +1416,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.49019608, b: 0.764151, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fca3c8ded0c2c2c4f9921b8ba4abaf57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

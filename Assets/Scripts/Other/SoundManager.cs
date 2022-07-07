@@ -19,6 +19,16 @@ public class SoundManager : MonoBehaviour
         BackgroundMusic.Play();
     }
 
+    public void PauseMusic()
+    {
+        BackgroundMusic.Pause();
+    }
+
+    public void UnpauseMusic()
+    {
+        BackgroundMusic.UnPause();
+    }
+
     public void StopMusic()
     {
         BackgroundMusic.Stop();

@@ -6,6 +6,8 @@ public class BubbleScript : MonoBehaviour
 {
     private BubbleStats bubbleStats;
     private SoundManager soundManager;
+    private Animator animator;
+    private Collider2D myCollider2D;
 
     public float TimeToBust;
 
@@ -13,6 +15,8 @@ public class BubbleScript : MonoBehaviour
     {
         bubbleStats = GetComponent<BubbleStats>();
         soundManager = FindObjectOfType<SoundManager>();
+        animator = GetComponentInChildren<Animator>();
+        myCollider2D = GetComponent<Collider2D>();
 
         bubbleStats.OnBust += Busted;
     }
@@ -20,12 +24,15 @@ public class BubbleScript : MonoBehaviour
     public void Busted()
     {
         StartCoroutine(Busting());
-        soundManager.BustingBubbles();
-        gameObject.SetActive(false);
     }
 
     public IEnumerator Busting()
     {
+        soundManager.BustingBubbles();
+        animator.SetTrigger("IsBusted");
+        myCollider2D.enabled = false;
         yield return new WaitForSeconds(TimeToBust);
+        myCollider2D.enabled = true;
+        gameObject.SetActive(false);
     }
 }

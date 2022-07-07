@@ -26,8 +26,6 @@ public class BubbleStats : MonoBehaviour
 
     private void Start()
     {
-        currentHP = MaxHP;
-
         posY = transform.position;
         axisY = transform.up;
 
@@ -43,6 +41,11 @@ public class BubbleStats : MonoBehaviour
     {
         posY += transform.right * Time.deltaTime * Speed;
         transform.position = posY + axisY * Mathf.Sin(Time.time * Frequency) * Magnitude;
+    }
+
+    private void OnEnable()
+    {
+        currentHP = MaxHP;
     }
 
     public void DeactivateBubble()
