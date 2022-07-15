@@ -141,7 +141,7 @@ MonoBehaviour:
     m_Bits: 512
   MaxHP: 3
   WinPoints: 15
-  ExtraTime: 2
+  ExtraTime: 1
   Speed: 3
   Frequency: 4
   Magnitude: 3
@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f07e0767079b463387a3fae9d9e3c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimationManager: {fileID: 0}
   TimeToBust: 2
 --- !u!1 &4349380225965703604
 GameObject:

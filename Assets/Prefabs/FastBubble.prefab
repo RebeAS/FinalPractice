@@ -140,7 +140,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   MaxHP: 1
-  WinPoints: 7
+  WinPoints: 3
   ExtraTime: 7
   Speed: 7
   Frequency: 4
@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f07e0767079b463387a3fae9d9e3c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyAnimationManager: {fileID: 0}
   TimeToBust: 2
 --- !u!1 &6138901820819586118
 GameObject:

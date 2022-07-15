@@ -36,6 +36,8 @@ public class CountDown : MonoBehaviour
         }
         else
         {
+            remainingTime = 0;
+            TimeText.text = remainingTime.ToString("0.00");
             GameOver();
             this.enabled = false;
         }
