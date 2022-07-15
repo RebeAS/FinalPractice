@@ -140,8 +140,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   MaxHP: 1
-  WinPoints: 3
-  ExtraTime: 7
+  WinPoints: 7
+  ExtraTime: 3
   Speed: 7
   Frequency: 4
   Magnitude: 2
